@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("pic.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+#header-container {
+    width:500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(20, 30, 40);
+    border-radius: 10px;
+}
+.site-name-text {
+    margin-top:20px;
+}
+h2 {
+    margin-top: 20px;
+}
+input[type="text"]{
+    margin-bottom: 30px;
+    outline: none;
+    width:70%;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+button[type="submit"]{
+    margin-bottom:15px;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sites {
+    margin-top: 20px;
+    width:500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#site-collection {
+    margin-bottom: 10px;
+    width:500px;
+    height: 70px;
+    background-color: rgb(20, 30, 40);
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    position: relative;
+    /* animation:col 4s 1; */
+}
+#site-collection .visit-delete {
+    align-items: flex-end;
+}
+span {
+    position: absolute;
+    right: 20px;
+}
+
+.visit-delete{
+    height:25px;
+    width:50px;
+    text-align: center;
+    text-decoration: none;
+    color: orangered;
+}
+.delete {
+    background-color: red;
+    color: white;
+    padding:5px 8px;
+ 
+}
