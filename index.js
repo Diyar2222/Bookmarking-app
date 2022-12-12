@@ -1,3 +1,4 @@
+//fix the adding of the site with similar names and site name (lower and upper case)
 let submitForm = document.getElementById("header-container")
 submitForm.addEventListener('submit', addForm)
 
@@ -25,19 +26,15 @@ function addForm(e){
         let bookmarks = JSON.parse(localStorage.getItem('bookmark'))
         for(let i=0;i<bookmarks.length; i++){
             if(bookmarks[i].url===url){
-                let name = bookmarks[i].name
-                alert("Already have this site")
+                alert("Already have this site url")
                 document.getElementById("header-container").reset()
-                let sitesDiv = document.querySelectorAll("#site-collection")
-                for(let i=0; i<sitesDiv.length;i++){
-                    let a = sitesDiv[i].innerText.indexOf(name)
-                    console.log(sitesDiv[i])
-                    if(a>-1){
-                        sitesDiv[i].style.backgroundColor = "green"
-                    }
-                }
                 return false
             } 
+            if(bookmarks[i].name.toLowerCase()===name.toLowerCase()){
+                alert("Already have this site name")
+                document.getElementById("header-container").reset()
+                return false
+            }
         }
         bookmarks.push(bookmark)
         localStorage.setItem('bookmark', JSON.stringify(bookmarks))
