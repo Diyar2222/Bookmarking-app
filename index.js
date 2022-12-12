@@ -1,4 +1,3 @@
-//fix the adding of the site with similar names and site name (lower and upper case)
 let submitForm = document.getElementById("header-container")
 submitForm.addEventListener('submit', addForm)
 
