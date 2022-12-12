@@ -26,7 +26,7 @@ function addForm(e){
         for(let i=0;i<bookmarks.length; i++){
             if(bookmarks[i].url===url){
                 let name = bookmarks[i].name
-                alert("уже есть такой сайт")
+                alert("Already have this site")
                 document.getElementById("header-container").reset()
                 let sitesDiv = document.querySelectorAll("#site-collection")
                 for(let i=0; i<sitesDiv.length;i++){
@@ -34,7 +34,6 @@ function addForm(e){
                     console.log(sitesDiv[i])
                     if(a>-1){
                         sitesDiv[i].style.backgroundColor = "green"
-                        // sitesDiv[i].className="green"
                     }
                 }
                 return false
@@ -80,7 +79,7 @@ function validateForm(name, url){
     var regex = new RegExp(expression);
 
     if(url!="" && !url.match(regex)){
-        alert("Неправильная форма URL")
+        alert("Wrong URL form")
         return false
     }
     return true
